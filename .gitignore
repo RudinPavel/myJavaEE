@@ -1,4 +1,6 @@
-#
+# All .idea/ files
 .idea/
-
+# All target/ files
 target/
+# All out/ files
+files/
