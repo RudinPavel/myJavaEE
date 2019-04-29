@@ -3,4 +3,4 @@
 # All target/ files
 target/
 # All out/ files
-files/
+out/

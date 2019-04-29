@@ -1,11 +1,13 @@
-package ru.vsu.human;
+package ru.vsu.human.entity;
 
 import java.util.Objects;
 
 public class Human {
 
     private Long id;
+
     private String name;
+
     private Integer Age;
 
     public Human() {
@@ -65,3 +67,26 @@ public class Human {
         Age = age;
     }
 }
+
+// import javax.persistence.NamedQueries;
+// import javax.persistence.NamedQuery;
+/*
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Objects;
+
+import static javax.persistence.GenerationType.IDENTITY;
+
+@Entity
+@Table(name = "Humans")
+
+
+  @Id
+    @GeneratedValue(strategy = IDENTITY)
+
+
+    @Column(name = "name")
+ */
