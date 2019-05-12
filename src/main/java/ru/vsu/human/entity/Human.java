@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Human {
 
+    // класс Human содержит поля, конструкторы класса, геттеры и сеттеры
+
     private Long id;
-
     private String name;
-
-    private Integer Age;
+    private Integer age;
 
     public Human() {
     }
@@ -16,31 +16,7 @@ public class Human {
     public Human(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
-        Age = age;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Human human = (Human) o;
-        return Objects.equals(id, human.id) &&
-                Objects.equals(name, human.name) &&
-                Objects.equals(Age, human.Age);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, Age);
-    }
-
-    @Override
-    public String toString() {
-        return "Human{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", Age=" + Age +
-                '}';
+        this.age = age;
     }
 
     public Long getId() {
@@ -60,11 +36,35 @@ public class Human {
     }
 
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(Integer age) {
-        Age = age;
+        age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return Objects.equals(id, human.id) &&
+                Objects.equals(name, human.name) &&
+                Objects.equals(age, human.age);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age);
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", Age=" + age +
+                '}';
     }
 }
 

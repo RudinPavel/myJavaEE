@@ -1,5 +1,7 @@
 package ru.vsu.view;
 
+import ru.vsu.human.boundary.HumanService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,10 @@ import java.io.IOException;
 
 @WebServlet("/")
 public class HumanServlet extends HttpServlet {
+
+    // Servlet осуществляет взаимодействие между приложением и сервером
+
+    private HumanService humanService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,5 +29,6 @@ public class HumanServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
+        humanService = new HumanService();
     }
 }
